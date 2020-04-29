@@ -1,6 +1,8 @@
 # Pull base image 
-From tomcat:8-jre8 
+From tomcat:latest 
 
 # Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
+MAINTAINER "Pratik Jain" 
 COPY ./webapp.war /usr/local/tomcat/webapps
+EXPOSE 8080
+CMD /usr/local/tomcat/bin/catalina.sh run
